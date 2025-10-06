@@ -1,0 +1,21 @@
+@media (max-width: 900px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.95rem;
+    }
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+    }
+    .logo {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 220px;
+    }
+}
