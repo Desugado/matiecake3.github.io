@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mid-Autumn Cakes | Matie Cake</title>
+    <title>Xuan Sang Tet Den | Matie Cake</title>
     <link rel="icon" type="image/png" href="Image/Logo.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/main.css">
@@ -54,8 +54,6 @@
             justify-content: center;
             overflow: hidden;
         }
-        .banner-title { font-size: 3.5rem; font-family: 'Roboto', cursive; color: #a85b2b; margin-bottom: 0.5em; }
-        .banner-sub { font-size: 1.5rem; color: #40602b; margin-bottom: 1em; }
         .banner-img {
             width: 100%;
             height: 100%;
@@ -64,49 +62,24 @@
             box-shadow: none;
             display: block;
         }
-        .section { padding: 40px 0; }
-        .section-title { font-size: 2rem; font-weight: 700; color: #40602b; text-align: center; margin-bottom: 32px; }
-        .products { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
-        .product-card { background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); width: 260px; padding: 20px; text-align: center; transition: box-shadow 0.2s; }
-        .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
-        .product-img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 16px; }
-        .product-thumb {
-            width: 100%;
-            max-width: 180px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .product-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .product-price { color: #a85b2b; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .product-desc { font-size: 0.95rem; color: #555; margin-bottom: 12px; }
-        footer { background: #1a1157; color: #fff; padding: 40px 0 20px 0; }
-        .footer-content { max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 32px; }
-        .footer-info { flex: 2; }
-        .footer-logo { height: 48px; margin-bottom: 16px; }
-        .footer-links { flex: 1; }
-        .footer-links ul { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 8px; }
-        .footer-links a { color: #ffe066; text-decoration: none; }
-        .footer-bottom { text-align: center; margin-top: 32px; font-size: 0.95rem; color: #bbb; }
-        @media (max-width: 900px) {
-            .products { flex-direction: column; align-items: center; }
-            .footer-content { flex-direction: column; align-items: center; }
+        .product-detail {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 32px 24px;
         }
         .slider {
             position: relative;
             width: 100%;
-            height: 180px;
+            height: 260px;
             overflow: hidden;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
         .slide {
             width: 100%;
-            height: 180px;
+            height: 260px;
             object-fit: cover;
             border-radius: 12px;
             position: absolute;
@@ -124,62 +97,220 @@
             transform: translateY(-50%);
             background: rgba(255,255,255,0.7);
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
             border-radius: 50%;
-            width: 32px; height: 32px;
-            line-height: 32px;
+            width: 40px; height: 40px;
+            line-height: 40px;
             text-align: center;
             z-index: 2;
         }
-        .slider .prev { left: 8px; }
-        .slider .next { right: 8px; }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0; top: 0;
-            width: 100vw; height: 100vh;
-            overflow: auto;
-            background: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
+        .slider .prev { left: 12px; }
+        .slider .next { right: 12px; }
+        .product-title { font-size: 2rem; font-weight: 700; color: #40602b; margin-bottom: 18px; text-align: center; }
+        .product-price { color: #a85b2b; font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; text-align: center; }
+        .product-desc { font-size: 1.05rem; color: #444; margin-bottom: 16px; }
+        .product-ingredient, .product-gift {
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 12px;
+            background: #fbeee0;
+            padding: 10px 16px;
+            border-radius: 8px;
         }
-        .modal-content {
+        .product-main {
+            max-width: 1200px;
+            margin: 40px auto;
             background: #fff;
-            margin: auto;
-            padding: 32px 24px;
-            border-radius: 12px;
+            border-radius: 24px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+            padding: 40px 48px;
+        }
+        .product-columns {
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+        }
+        .product-image-area {
+            flex: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-main-img {
+            width: 100%;
             max-width: 480px;
-            width: 90%;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-            position: relative;
-            animation: modalFadeIn 0.3s;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
-        .close {
-            position: absolute;
-            top: 16px; right: 20px;
-            font-size: 2rem;
-            color: #222b93;
+        .product-info-area {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .product-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #234d1b;
+            margin-bottom: 18px;
+        }
+        .product-price-old {
+            color: #999;
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+        .product-price {
+            color: #a85b2b;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .product-quick-info {
+            font-size: 1.08rem;
+            color: #222;
+            margin-bottom: 18px;
+            list-style: none;
+            padding: 0;
+        }
+        .product-quick-info li { margin-bottom: 8px; }
+        .order-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        .order-minus, .order-plus {
+            width: 32px; height: 32px;
+            font-size: 1.3rem;
+            background: #eee;
+            border: none;
+            border-radius: 6px;
             cursor: pointer;
-            font-weight: bold;
-            transition: color 0.2s;
         }
-        .close:hover { color: #a85b2b; }
-        @media (max-width: 600px) {
-            .modal-content {
-                padding: 18px 8px;
-                max-width: 98vw;
-            }
+        .order-qty {
+            width: 48px;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 4px;
         }
-        @keyframes modalFadeIn {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .product-card-link {
+        .order-btn {
+            background: #a85b2b;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
             text-decoration: none;
-            color: inherit;
-            display: inline-block;
+            transition: background 0.2s;
+            margin-left: 12px;
+        }
+        .order-btn:hover { background: #40602b; }
+        .product-category {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .product-desc-area {
+            margin-top: 48px;
+            border-top: 1px solid #eee;
+            padding-top: 32px;
+        }
+        .desc-title {
+            font-size: 1.3rem;
+            color: #a85b2b;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .desc-content {
+            font-size: 1.08rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        @media (max-width: 900px) {
+            .product-detail { padding: 18px 4px; }
+            .slider { height: 180px; }
+            .slide { height: 180px; }
+            .product-columns { flex-direction: column; gap: 18px; }
+            .product-image-area, .product-info-area { padding: 0; }
+            .product-main { border-radius: 0; padding: 12px 2vw; }
+            .product-main-img { max-width: 98vw; height: auto; }
+            .product-desc-area { padding-top: 18px; }
+        }
+        footer { background: #1a1157; color: #fff; padding: 40px 0 20px 0; }
+        .footer-content { max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 32px; }
+        .footer-info { flex: 2; }
+        .footer-logo { height: 48px; margin-bottom: 16px; }
+        .footer-links { flex: 1; }
+        .footer-links ul { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #ffe066; text-decoration: none; }
+        .footer-bottom { text-align: center; margin-top: 32px; font-size: 0.95rem; color: #bbb; }
+        @media (max-width: 900px) {
+            .products { flex-direction: column; align-items: center; }
+            .footer-content { flex-direction: column; align-items: center; }
+        }
+        .related-products-section {
+            margin: 56px auto 0 auto;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            padding: 32px 24px;
+        }
+        .related-title {
+            font-size: 1.5rem;
+            color: #40602b;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        .related-products {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .related-card {
+            display: block;
+            width: 210px;
+            background: #faf7f2;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            text-align: center;
+            text-decoration: none;
+            color: #222;
+            padding: 18px 12px;
+            transition: box-shadow 0.2s;
+        }
+        .related-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+        .related-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+        .related-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+        .related-price {
+            color: #a85b2b;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        @media (max-width: 900px) {
+            .related-products { gap: 12px; justify-content: center; }
+            .related-card { width: 45vw; min-width: 140px; }
         }
     </style>
 </head>
@@ -191,18 +322,18 @@
                 <li class="dropdown">
                     <a href="#">Cake Menu</a>
                     <ul class="dropdown-content">
-                        <li><a href="#new-products">New Products</a></li>
-                        <li><a href="#favorite-products">Favorite Products</a></li>
-                        <li><a href="#christmas-gifts">Christmas Gifts</a></li>
-                        <li><a href="#tet-gifts">Tet Gifts</a></li>
+                        <li><a href="index.html#san-pham-moi">New Products</a></li>
+                        <li><a href="index.html#san-pham-yeu-thich">Favorite Products</a></li>
+                        <li><a href="index.html#gift-giang-sinh">Christmas Gifts</a></li>
+                        <li><a href="index.html#gift-tet">Tet Gifts</a></li>
                     </ul>
                 </li>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="khach-hang-than-thiet.html">Loyal Customers</a>
+                    <a href="#">Loyal Customers</a>
                     <ul class="dropdown-content">
-                        <li><a href="#loyal-customers">Loyal Customers</a></li>
-                        <li><a href="#member-policy">Member/VIP Policy</a></li>
+                        <li><a href="index.html#khac-hang-than-thiet">Loyal Customers</a></li>
+                        <li><a href="index.html#chinh-sach-member">Member/VIP Policy</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Delivery</a></li>
@@ -214,130 +345,77 @@
     <section class="banner">
         <img src="Image/Giới thiệu.jpg" alt="Mid-Autumn Cake" class="banner-img">
     </section>
-
-    <!-- New Products -->
-    <section class="section" id="new-products">
-        <div class="section-title">New Products</div>
-        <div class="products">
-            <a href="tinh-hoa-doan-vien.html" class="product-card-link">
-                <div class="product-card">
-                    <img src="Image/Tinh hoa đoàn viên 1.jpg" alt="Tinh Hoa Đoàn Viên" class="product-thumb">
-                    <div class="product-name">Box of 4 Baked Cakes – “Quintessence of Reunion”</div>
+    <div class="product-main">
+        <div class="product-columns">
+            <div class="product-image-area">
+                <div class="slider" id="slider">
+                    <img src="Image 3/Xuân Sang Tết đến 1.jpg" class="slide active" alt="Xuân Sang Tết đến">
+                    <img src="Image 3/Xuân Sang Tết đến 2.jpg" class="slide" alt="Xuân Sang Tết đến 2">
+                    <img src="Image 3/Xuân Sang Tết đến 3.jpg" class="slide" alt="Xuân Sang Tết đến 3">
+                    <img src="Image 3/Xuân Sang Tết đến 4.jpg" class="slide" alt="Xuân Sang Tết đến 4">         
+                    <!-- Add more images if available -->
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
                 </div>
-            </a>
-            <a href="kim-sa-nguyet-bao.html" class="product-card-link">
-                <div class="product-card">
-                    <img src="Image/Kim sa nguyệt bảo 1.jpg" alt="Kim Sa Nguyệt Bảo" class="product-thumb">
-                    <div class="product-name">Lava Box - Golden Moon Treasure</div>
+            </div>
+            <div class="product-info-area">
+                <h1 class="product-title">Xuan Sang Tet Den</h1>
+                <div class="product-price">780,000 ₫</div>
+                <ul class="product-quick-info">
+                    <li><b>– Includes:</b></li> <li>Spring Reunion Colors (five-color coconut jam)</li>
+                    <li>Tan Nien An Lac (dried chicken with lemon leaves)</li>
+                    <li>Golden Fortune (pandan cookies).</li>
+                    <li>Golden Lucky Draw (stretched cheese biscuits)</li>
+                    <li>Happiness, Longevity, and Perfection (seed cookies)</li>
+                    <li>Lasting Happiness (Nougat)</li>
+                    <li><b>– Weight:</b> 250g/cake</li>
+                    <li><b>– Shelf life:</b> 35 days from production date</li>
+                    <li><b>– Storage instructions:</b> Keep at room temperature (about 25°C) and use within 3 days after opening the packaging.</li>
+                </ul>
+                <div class="order-controls">
+                    <button class="order-minus">-</button>
+                    <input type="number" value="1" min="1" class="order-qty">
+                    <button class="order-plus">+</button>
+                    <a href="https://www.facebook.com/profile.php?id=61553058065460" target="_blank" class="order-btn">Order</a>
                 </div>
-            </a>
-            <a href="ngoc-sac-tinh-hoa.html" class="product-card-link">
-                <div class="product-card">
-                    <img src="Image/Ngọc sắc tinh hoa 1.jpg" alt="Ngọc Sắc Tinh Hoa" class="product-thumb">
-                    <div class="product-name">Jade Essence</div>
-                </div>
-            </a>
-            <a href="trang-vang-gan-ket.html" class="product-card-link">
-                <div class="product-card">
-                    <img src="Image/Trăng vàng đoàn kết 1.jpg" alt="Trăng Vàng Gắn Kết" class="product-thumb">
-                    <div class="product-name">Mini Box - Golden Moon Connection</div>
-                </div>
-            </a>
+                <div class="product-category">Category: <a href="index.html#tet-gifts">Tet Gifts</a></div>
+            </div>
         </div>
-    </section>
-
-    <!-- Favorite Products -->
-    <section class="section" id="favorite-products">
-        <div class="section-title">Favorite Products</div>
-        <div class="products">
-            <a href="set-tasty.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('set-tasty-3')">
-                    <img src="Image 2/Tasty 3/SetTasty3 1.png" alt="Set Tasty 3" class="product-thumb">
-                    <div class="product-name">Set Tasty 3</div>
-                </div>
-            </a>
-            <a href="hoang-kim-bong-lan.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('hoang-kim-bong-lan')">
-                    <img src="Image 2/Hoàng Kim Bông Lan/Hoàng Kim Bông Lang 1.png" alt="Hoàng Kim Bông Lan" class="product-thumb">
-                    <div class="product-name">Golden Sponge Cake</div>
-                </div>
-            </a>
-            <a href="flan-gato.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('flan-gato')">
-                    <img src="Image 2/Flan gato/Flan Gato1.png" alt="Flan Gato" class="product-thumb">
-                    <div class="product-name">Flan Gato</div>
-                </div>
-            </a>
-            <a href="flan-gato-donut.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('flan-gato-donut')">
-                    <img src="Image 2/Flan Gato Donut/Flan Gato Donut 1.png" alt="Flan Gato Donut" class="product-thumb">
-                    <div class="product-name">Flan Gato Donut</div>
-                </div>
-            </a>
-            <a href="flan-cheese.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('flancheese')">
-                    <img src="Image 2/Flancheese/Flancheese 1.png" alt="Flancheese" class="product-thumb">
-                    <div class="product-name">Flancheese</div>
-                </div>
-            </a>
-            <a href="flan-cheese-donut.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('flancheese-donut')">
-                    <img src="Image 2/Flan cheese donut/Flancheese Donut 1.png" alt="Flancheese Donut" class="product-thumb">
-                    <div class="product-name">Flancheese Donut</div>
-                </div>
-            </a>
+        <div class="product-desc-area">
+            <h2 class="desc-title">Description</h2>
+            <div class="desc-content">
+                <b>Tet Den Xuan Sang</b> is a high-class Tet gift box, combining the essence of traditional and modern flavors in a luxurious red box design, symbolizing luck and prosperity. Each gift inside carries a good message, sending good wishes for a successful new year:
+                <li>Spring Reunion Colors: Bright five-color coconut jam symbolizes full fortune and joy of reunion.</li>
+                <li>Tan Nien An Lac: slightly spicy and aromatic dried chicken with lemon leaves, like a wish for a peaceful and energetic new year.</li>
+                <li>Hoang Kim Don Loc: pineapple cookies with a harmonious sweet and sour taste, symbolizing luck and prosperity.</li>
+                <li>Phuc Tho Vien Man: crispy and delicious seed cookies, conveying a message of abundance, fullness and health.</li>
+                <li>Golden Fortune: Golden cheesecake symbolizes wealth and prosperity.</li>
+                <li>Lasting Happiness: sweet, chewy nougat, symbolizing lasting love and lasting happiness.</li>
+With a delicate combination of flavor and meaning, Tet Xuan Den Sang is not only a delicious Tet gift box but also a gift with deep spiritual value, suitable for giving to family, friends, colleagues or partners. This is the wish for a new year of full happiness - complete health - complete happiness.
+                <br><br>
+                <b>Voucher</b>
+                <ul>
+                    <li> Voucher to join the handmade Mid-Autumn cake workshop.</li>
+                </ul>
+            </div>
         </div>
-    </section>
-
-    <!-- Christmas Gifts -->
-    <section class="section" id="christmas-gifts">
-        <div class="section-title">Christmas Gifts</div>
-        <div class="products">
-            <a href="ginger-noel.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('ginger-noel')">
-                    <img src="Image 2/Ginger Noel 1.JPG" alt="Ginger Noel" class="product-thumb">
-                    <div class="product-name">Ginger Noel</div>
-                </div>
+    </div>
+    <div class="related-products-section">
+        <h2 class="related-title">Related Products</h2>
+        <div class="related-products">
+            <a href="kim-bao-phat-loc.html" class="related-card">
+                <img src="Image 2/Kim Bảo Phát Lộc 1.jpg" alt="Kim Bao Phat Loc">
+                <div class="related-name">Kim Bao Phat Loc</div>
+                <div class="related-price">499,000 ₫</div>
             </a>
-            <a href="merry-crossiant.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('merry-crossiant')">
-                    <img src="Image 3/Merry Croissant 1.JPG" alt="Merry Croissant" class="product-thumb">
-                    <div class="product-name">Merry Croissant</div>
-                </div>
+            <a href="kim-ngan-phat-tai.html" class="related-card">
+                <img src="Image 2/Kim Ngân Phát Tài 1.jpg" alt="Kim Ngan Phat Tai  ">
+                <div class="related-name">Kim Ngan Phat Tai</div>
+                <div class="related-price">449,000 ₫</div>
             </a>
-            <a href="noel-delight.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('noel-delight')">
-                    <img src="Image 3/Noel Delight 1.JPG" alt="Noel Delight" class="product-thumb">
-                    <div class="product-name">Noel Delight</div>
-                </div>
-            </a>
+            <!-- Add more products if needed -->
         </div>
-    </section>
-
-    <!-- Tet Gifts -->
-    <section class="section" id="tet-gifts">
-        <div class="section-title">Tet Gifts</div>
-        <div class="products">
-            <a href="kim-bao-phat-loc.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('kim-bao-phat-loc')">
-                    <img src="Image 2/Kim Bảo Phát Lộc 1.jpg" alt="Kim Bảo Phát Lộc" class="product-thumb">
-                    <div class="product-name">Kim Bao Phat Loc</div>
-                </div>
-            </a>
-            <a href="kim-ngan-phat-tai.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('kim-ngan-phat-tai')">
-                    <img src="Image 2/Kim Ngân Phát Tài 1.jpg" alt="Kim Ngân Phát Tài" class="product-thumb">
-                    <div class="product-name">Kim Ngan Phat Tai</div>
-                </div>
-            </a>
-            <a href="xuan-sang-den-tet.html" class="product-card-link">
-                <div class="product-card" onclick="showProductModal('xuan-sang-den-tet')">
-                    <img src="Image 3/Xuân Sang Tết đến 1.jpg" alt="Xuân Sang Tết Đến" class="product-thumb">
-                    <div class="product-name">Xuan Sang Tet Den</div>
-                </div>
-            </a>
-        </div>
-    </section>
+    </div>
     <footer>
         <div class="footer-content">
             <div class="footer-info">
@@ -366,49 +444,41 @@
         </div>
     </footer>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var sliders = document.querySelectorAll('.slider');
-    sliders.forEach(function(slider) {
-        var slides = slider.querySelectorAll('.slide');
-        var current = 0;
-        var prevBtn = slider.querySelector('.prev');
-        var nextBtn = slider.querySelector('.next');
-        function showSlide(idx) {
-            slides.forEach(function(s, i) {
-                s.classList.toggle('active', i === idx);
-            });
-        }
-        prevBtn.onclick = function() {
-            current = (current - 1 + slides.length) % slides.length;
+        document.addEventListener('DOMContentLoaded', function() {
+            var slider = document.getElementById('slider');
+            var slides = slider.querySelectorAll('.slide');
+            var current = 0;
+            var prevBtn = slider.querySelector('.prev');
+            var nextBtn = slider.querySelector('.next');
+            function showSlide(idx) {
+                slides.forEach(function(s, i) {
+                    s.classList.toggle('active', i === idx);
+                });
+            }
+            prevBtn.onclick = function() {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            };
+            nextBtn.onclick = function() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            };
             showSlide(current);
-        };
-        nextBtn.onclick = function() {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-        };
-        showSlide(current);
-    });
-});
 
-function showProductModal(key) {
-    const p = productData[key];
-    if (!p) return;
-    let html = `
-        <div class="modal-slider">
-            ${p.images.map(img => `<img src="${img}" style="width:100%;margin-bottom:8px;border-radius:8px;">`).join('')}
-        </div>
-        <h2>${p.name}</h2>
-        <div style="color:#a85b2b;font-weight:bold;margin-bottom:8px;">${p.price}</div>
-        <div style="margin-bottom:8px;">${p.desc}</div>
-        <div style="margin-bottom:8px;"><strong>${p.ingredient || ''}</strong></div>
-        <div style="margin-bottom:8px;"><strong>${p.gift || ''}</strong></div>
-    `;
-    document.getElementById('modal-body').innerHTML = html;
-    document.getElementById('product-modal').style.display = 'flex';
-}
-function closeProductModal() {
-    document.getElementById('product-modal').style.display = 'none';
-}
+            // Handle quantity increase/decrease
+            const minusBtn = document.querySelector('.order-minus');
+            const plusBtn = document.querySelector('.order-plus');
+            const qtyInput = document.querySelector('.order-qty');
+
+            minusBtn.addEventListener('click', function() {
+                let val = parseInt(qtyInput.value, 10);
+                if (val > 1) qtyInput.value = val - 1;
+            });
+            plusBtn.addEventListener('click', function() {
+                let val = parseInt(qtyInput.value, 10);
+                qtyInput.value = val + 1;
+            });
+        });
     </script>
 </body>
 </html>
