@@ -1,76 +1,69 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bánh Trung Thu | Matie Cake</title>
+    <title>Mid-Autumn Cakes | Matie Cake</title>
     <link rel="icon" type="image/png" href="Image/Logo.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/media query.css">
     <style>
-        html {
-    scroll-behavior: smooth;
-}
-
-body { margin: 0; font-family: 'Roboto', sans-serif; background: #faf7f2; color: #222; }
-header { background: #3f53ae; color: #fff; padding: 0 40px; display: flex; align-items: center; height: 80px; }
-.logo { height: 60px; margin-right: 40px; }
-nav { flex: 1; }
-nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; position: relative; }
-nav li { font-weight: 700; position: relative; }
-nav a { color: #fff; text-decoration: none; transition: color 0.2s; }
-nav a:hover { color: #ffe066; }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #2a2f95;
-    min-width: 220px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    border-radius: 0 0 8px 8px;
-    z-index: 10;
-}
-.dropdown-content li {
-    padding: 0;
-}
-.dropdown-content a {
-    display: block;
-    padding: 12px 24px;
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    border-bottom: 1px solid #4e6b2b;
-}
-.dropdown-content a:hover {
-    background: #2e3d1b;
-    color: #ffe066;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Roboto', sans-serif; background: #faf7f2; color: #222; }
+        header { background: #3f53ae; color: #fff; padding: 0 40px; display: flex; align-items: center; height: 80px; }
+        .logo { height: 60px; margin-right: 40px; }
+        nav { flex: 1; }
+        nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; position: relative; }
+        nav li { font-weight: 700; position: relative; }
+        nav a { color: #fff; text-decoration: none; transition: color 0.2s; }
+        nav a:hover { color: #ffe066; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #2a2f95;
+            min-width: 220px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            border-radius: 0 0 8px 8px;
+            z-index: 10;
+        }
+        .dropdown-content li { padding: 0; }
+        .dropdown-content a {
+            display: block;
+            padding: 12px 24px;
+            color: #fff;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid #4e6b2b;
+        }
+        .dropdown-content a:hover {
+            background: #2e3d1b;
+            color: #ffe066;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
         .banner {
-    background: #fbeee0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.banner-title { font-size: 3.5rem; font-family: 'Roboto', cursive; color: #a85b2b; margin-bottom: 0.5em; }
-.banner-sub { font-size: 1.5rem; color: #40602b; margin-bottom: 1em; }
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
-}
+            background: #fbeee0;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .banner-title { font-size: 3.5rem; font-family: 'Roboto', cursive; color: #a85b2b; margin-bottom: 0.5em; }
+        .banner-sub { font-size: 1.5rem; color: #40602b; margin-bottom: 1em; }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            box-shadow: none;
+            display: block;
+        }
         .section { padding: 40px 0; }
         .section-title { font-size: 2rem; font-weight: 700; color: #40602b; text-align: center; margin-bottom: 32px; }
         .products { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
@@ -78,16 +71,16 @@ nav a:hover { color: #ffe066; }
         .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
         .product-img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 16px; }
         .product-thumb {
-    width: 100%;
-    max-width: 180px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+            width: 100%;
+            max-width: 180px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .product-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
         .product-price { color: #a85b2b; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
         .product-desc { font-size: 0.95rem; color: #555; margin-bottom: 12px; }
@@ -105,100 +98,89 @@ nav a:hover { color: #ffe066; }
             .footer-content { flex-direction: column; align-items: center; }
         }
         .slider {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    margin-bottom: 16px;
-}
-.slide {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    position: absolute;
-    left: 0; top: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-.slide.active {
-    opacity: 1;
-    position: relative;
-}
-.slider .prev, .slider .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.7);
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 32px; height: 32px;
-    line-height: 32px;
-    text-align: center;
-    z-index: 2;
-}
-.slider .prev { left: 8px; }
-.slider .next { right: 8px; }
-/* Modal overlay */
-.modal {
-    display: none; /* Ẩn mặc định */
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0;
-    width: 100vw; height: 100vh;
-    overflow: auto;
-    background: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal content box */
-.modal-content {
-    background: #fff;
-    margin: auto;
-    padding: 32px 24px;
-    border-radius: 12px;
-    max-width: 480px;
-    width: 90%;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    position: relative;
-    animation: modalFadeIn 0.3s;
-}
-
-/* Close button */
-.close {
-    position: absolute;
-    top: 16px; right: 20px;
-    font-size: 2rem;
-    color: #222b93;
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-.close:hover {
-    color: #a85b2b;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .modal-content {
-        padding: 18px 8px;
-        max-width: 98vw;
-    }
-}
-
-/* Fade in animation */
-@keyframes modalFadeIn {
-    from { transform: translateY(40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .slide {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            position: absolute;
+            left: 0; top: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .slide.active {
+            opacity: 1;
+            position: relative;
+        }
+        .slider .prev, .slider .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.7);
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 32px; height: 32px;
+            line-height: 32px;
+            text-align: center;
+            z-index: 2;
+        }
+        .slider .prev { left: 8px; }
+        .slider .next { right: 8px; }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            overflow: auto;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #fff;
+            margin: auto;
+            padding: 32px 24px;
+            border-radius: 12px;
+            max-width: 480px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        .close {
+            position: absolute;
+            top: 16px; right: 20px;
+            font-size: 2rem;
+            color: #222b93;
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .close:hover { color: #a85b2b; }
+        @media (max-width: 600px) {
+            .modal-content {
+                padding: 18px 8px;
+                max-width: 98vw;
+            }
+        }
+        @keyframes modalFadeIn {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
         .product-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-}
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -207,175 +189,175 @@ nav a:hover { color: #ffe066; }
         <nav>
             <ul>
                 <li class="dropdown">
-                    <a href="#">Menu Bánh</a>
+                    <a href="#">Cake Menu</a>
                     <ul class="dropdown-content">
-                        <li><a href="#san-pham-moi">Sản phẩm mới</a></li>
-                        <li><a href="#san-pham-yeu-thich">Sản phẩm được yêu thích</a></li>
-                        <li><a href="#gift-giang-sinh">Gift quà giáng sinh</a></li>
-                        <li><a href="#gift-tet">Gift quà Tết</a></li>
+                        <li><a href="#new-products">New Products</a></li>
+                        <li><a href="#favorite-products">Favorite Products</a></li>
+                        <li><a href="#christmas-gifts">Christmas Gifts</a></li>
+                        <li><a href="#tet-gifts">Tet Gifts</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="khach-hang-than-thiet.html">Khách Hàng Thân Thiết</a>
-                <ul class="dropdown-content">
-                        <li><a href="#khac-hang-than-thiet">Khách hàng thân thiết</a></li>
-                        <li><a href="#chinh-sach-member">Chính sách member/vip</a></li></li>
+                    <a href="khach-hang-than-thiet.html">Loyal Customers</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#loyal-customers">Loyal Customers</a></li>
+                        <li><a href="#member-policy">Member/VIP Policy</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Giao Hàng</a></li>
-                <li><a href="#">Quy định chung</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">General Policy</a></li>
                 <li><a href="#">Workshop</a></li>
             </ul>
         </nav>
     </header>
     <section class="banner">
-        <img src="Image/Giới thiệu.jpg" alt="Bánh Trung Thu" class="banner-img">
+        <img src="Image/Giới thiệu.jpg" alt="Mid-Autumn Cake" class="banner-img">
     </section>
 
-    <!-- Sản phẩm mới -->
-<section class="section" id="san-pham-moi">
-    <div class="section-title">Sản phẩm mới</div>
-    <div class="products">
-        <a href="tinh-hoa-doan-vien.html" class="product-card-link">
-            <div class="product-card">
-                <img src="Image/Tinh hoa đoàn viên 1.jpg" alt="Tinh Hoa Đoàn Viên" class="product-thumb">
-                <div class="product-name">Hộp 4 Bánh Nướng – “Tinh Hoa Đoàn Viên”</div>
-            </div>
-        </a>
-        <a href="kim-sa-nguyet-bao.html" class="product-card-link">
-            <div class="product-card">
-                <img src="Image/Kim sa nguyệt bảo 1.jpg" alt="Kim Sa Nguyệt Bảo" class="product-thumb">
-                <div class="product-name">Hộp Lava - Kim Sa Nguyệt Bảo</div>
-            </div>
-        </a>
-        <a href="ngoc-sac-tinh-hoa.html" class="product-card-link">
-            <div class="product-card">
-                <img src="Image/Ngọc sắc tinh hoa 1.jpg" alt="Ngọc Sắc Tinh Hoa" class="product-thumb">
-                <div class="product-name">Ngọc Sắc Tinh Hoa</div>
-            </div>
-        </a>
-        <a href="trang-vang-gan-ket.html" class="product-card-link">
-            <div class="product-card">
-                <img src="Image/Trăng vàng đoàn kết 1.jpg" alt="Trăng Vàng Gắn Kết" class="product-thumb">
-                <div class="product-name">Hộp Mini - Trăng vàng gắn kết</div>
-            </div>
-        </a>
-    </div>
-</section>
+    <!-- New Products -->
+    <section class="section" id="new-products">
+        <div class="section-title">New Products</div>
+        <div class="products">
+            <a href="tinh-hoa-doan-vien.html" class="product-card-link">
+                <div class="product-card">
+                    <img src="Image/Tinh hoa đoàn viên 1.jpg" alt="Tinh Hoa Đoàn Viên" class="product-thumb">
+                    <div class="product-name">Box of 4 Baked Cakes – “Quintessence of Reunion”</div>
+                </div>
+            </a>
+            <a href="kim-sa-nguyet-bao.html" class="product-card-link">
+                <div class="product-card">
+                    <img src="Image/Kim sa nguyệt bảo 1.jpg" alt="Kim Sa Nguyệt Bảo" class="product-thumb">
+                    <div class="product-name">Lava Box - Golden Moon Treasure</div>
+                </div>
+            </a>
+            <a href="ngoc-sac-tinh-hoa.html" class="product-card-link">
+                <div class="product-card">
+                    <img src="Image/Ngọc sắc tinh hoa 1.jpg" alt="Ngọc Sắc Tinh Hoa" class="product-thumb">
+                    <div class="product-name">Jade Essence</div>
+                </div>
+            </a>
+            <a href="trang-vang-gan-ket.html" class="product-card-link">
+                <div class="product-card">
+                    <img src="Image/Trăng vàng đoàn kết 1.jpg" alt="Trăng Vàng Gắn Kết" class="product-thumb">
+                    <div class="product-name">Mini Box - Golden Moon Connection</div>
+                </div>
+            </a>
+        </div>
+    </section>
 
-<!-- Sản phẩm được yêu thích -->
-<section class="section" id="san-pham-yeu-thich">
-    <div class="section-title">Sản phẩm được yêu thích</div>
-    <div class="products">
-    <a href="set-tasty.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('set-tasty-3')">
-            <img src="Image 2/Tasty 3/SetTasty3 1.png" alt="Set Tasty 3" class="product-thumb">
-            <div class="product-name">Set Tasty 3</div>
+    <!-- Favorite Products -->
+    <section class="section" id="favorite-products">
+        <div class="section-title">Favorite Products</div>
+        <div class="products">
+            <a href="set-tasty.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('set-tasty-3')">
+                    <img src="Image 2/Tasty 3/SetTasty3 1.png" alt="Set Tasty 3" class="product-thumb">
+                    <div class="product-name">Set Tasty 3</div>
+                </div>
+            </a>
+            <a href="hoang-kim-bong-lan.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('hoang-kim-bong-lan')">
+                    <img src="Image 2/Hoàng Kim Bông Lan/Hoàng Kim Bông Lang 1.png" alt="Hoàng Kim Bông Lan" class="product-thumb">
+                    <div class="product-name">Golden Sponge Cake</div>
+                </div>
+            </a>
+            <a href="flan-gato.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('flan-gato')">
+                    <img src="Image 2/Flan gato/Flan Gato1.png" alt="Flan Gato" class="product-thumb">
+                    <div class="product-name">Flan Gato</div>
+                </div>
+            </a>
+            <a href="flan-gato-donut.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('flan-gato-donut')">
+                    <img src="Image 2/Flan Gato Donut/Flan Gato Donut 1.png" alt="Flan Gato Donut" class="product-thumb">
+                    <div class="product-name">Flan Gato Donut</div>
+                </div>
+            </a>
+            <a href="flan-cheese.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('flancheese')">
+                    <img src="Image 2/Flancheese/Flancheese 1.png" alt="Flancheese" class="product-thumb">
+                    <div class="product-name">Flancheese</div>
+                </div>
+            </a>
+            <a href="flan-cheese-donut.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('flancheese-donut')">
+                    <img src="Image 2/Flan cheese donut/Flancheese Donut 1.png" alt="Flancheese Donut" class="product-thumb">
+                    <div class="product-name">Flancheese Donut</div>
+                </div>
+            </a>
         </div>
-        </a>
-        <a href="hoang-kim-bong-lan.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('hoang-kim-bong-lan')">
-            <img src="Image 2/Hoàng Kim Bông Lan/Hoàng Kim Bông Lang 1.png" alt="Hoàng Kim Bông Lan" class="product-thumb">
-            <div class="product-name">Hoàng Kim Bông Lan</div>
-        </div>
-    </a>
-    <a href="flan-gato.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('flan-gato')">
-            <img src="Image 2/Flan gato/Flan Gato1.png" alt="Flan Gato" class="product-thumb">
-            <div class="product-name">Flan Gato</div>
-        </div>
-    </a>
-    <a href="flan-gato-donut.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('flan-gato-donut')">
-            <img src="Image 2/Flan Gato Donut/Flan Gato Donut 1.png" alt="Flan Gato Donut" class="product-thumb">
-            <div class="product-name">Flan Gato Donut</div>
-        </div>
-    </a>
-    <a href="flancheese.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('flancheese')">
-            <img src="Image 2/Flancheese/Flancheese 1.png" alt="Flancheese" class="product-thumb">
-            <div class="product-name">Flancheese</div>
-        </div>
-    </a>
-    <a href="flancheese-donut.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('flancheese-donut')">
-            <img src="Image 2/Flan cheese donut/Flancheese Donut 1.png" alt="Flancheese Donut" class="product-thumb">
-            <div class="product-name">Flancheese Donut</div>
-        </div>
-    </a>
-    </div>
-</section>
+    </section>
 
-<!-- Gift quà giáng sinh -->
-<section class="section" id="gift-giang-sinh">
-    <div class="section-title">Gift quà giáng sinh</div>
-    <div class="products">
-        <a href="ginger-noel.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('ginger-noel">
-            <img src="Image 2/Ginger Noel 1.JPG" alt="Ginger Noel" class="product-thumb">
-            <div class="product-name">Ginger Noel</div>
+    <!-- Christmas Gifts -->
+    <section class="section" id="christmas-gifts">
+        <div class="section-title">Christmas Gifts</div>
+        <div class="products">
+            <a href="ginger-noel.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('ginger-noel')">
+                    <img src="Image 2/Ginger Noel 1.JPG" alt="Ginger Noel" class="product-thumb">
+                    <div class="product-name">Ginger Noel</div>
+                </div>
+            </a>
+            <a href="merry-crossiant.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('merry-crossiant')">
+                    <img src="Image 3/Merry Croissant 1.JPG" alt="Merry Croissant" class="product-thumb">
+                    <div class="product-name">Merry Croissant</div>
+                </div>
+            </a>
+            <a href="noel-delight.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('noel-delight')">
+                    <img src="Image 3/Noel Delight 1.JPG" alt="Noel Delight" class="product-thumb">
+                    <div class="product-name">Noel Delight</div>
+                </div>
+            </a>
         </div>
-        </a>
-        <a href="merry-crossiant.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('merry-crossiant)">
-            <img src="Image 3/Merry Croissant 1.JPG" alt="Merry Crossiant" class="product-thumb">
-            <div class="product-name">Merry Crossiant</div>
-        </div>
-        </a>
-        <a href="noel-delight.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('noel-delight')">
-            <img src="Image 3/Noel Delight 1.JPG" alt="Noel Delight" class="product-thumb">
-            <div class="product-name">Noel Delight</div>
-        </div>
-        </a>
-    </div>
-</section>
+    </section>
 
-<!-- Gift quà Tết -->
-<section class="section" id="gift-tet">
-    <div class="section-title">Gift quà Tết</div>
-    <div class="products">
-        <a href="kim-bao-phat-loc.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('kim-bao-phat-loc')">
-            <img src="Image 2/Kim Bảo Phát Lộc 1.jpg" alt="Kim Bảo Phát Lộc" class="product-thumb">
-            <div class="product-name">Kim Bảo Phát Lộc</div>
+    <!-- Tet Gifts -->
+    <section class="section" id="tet-gifts">
+        <div class="section-title">Tet Gifts</div>
+        <div class="products">
+            <a href="kim-bao-phat-loc.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('kim-bao-phat-loc')">
+                    <img src="Image 2/Kim Bảo Phát Lộc 1.jpg" alt="Kim Bảo Phát Lộc" class="product-thumb">
+                    <div class="product-name">Kim Bao Phat Loc</div>
+                </div>
+            </a>
+            <a href="kim-ngan-phat-tai.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('kim-ngan-phat-tai')">
+                    <img src="Image 2/Kim Ngân Phát Tài 1.jpg" alt="Kim Ngân Phát Tài" class="product-thumb">
+                    <div class="product-name">Kim Ngan Phat Tai</div>
+                </div>
+            </a>
+            <a href="xuan-sang-den-tet.html" class="product-card-link">
+                <div class="product-card" onclick="showProductModal('xuan-sang-den-tet')">
+                    <img src="Image 3/Xuân Sang Tết đến 1.jpg" alt="Xuân Sang Tết Đến" class="product-thumb">
+                    <div class="product-name">Xuan Sang Tet Den</div>
+                </div>
+            </a>
         </div>
-        </a>
-        <a href="kim-ngan-phat-tai.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('kim-ngan-phat-tai')">
-            <img src="Image 2/Kim Ngân Phát Tài 1.jpg" alt="Kim Ngân Phát Tài" class="product-thumb">
-            <div class="product-name">Kim Ngân Phát Tài</div>
-        </div>
-        </a>
-        <a href="xuan-sang-den-tet.html" class="product-card-link">
-        <div class="product-card" onclick="showProductModal('xuan-sang-den-tet')">
-            <img src="Image 3/Xuân Sang Tết đến 1.jpg" alt="Xuân Sang Tết Đến" class="product-thumb">
-            <div class="product-name">Xuân Sang Tết Đến</div>
-        </div>
-        </a>
-    </div>
-</section>
+    </section>
     <footer>
         <div class="footer-content">
             <div class="footer-info">
                 <img src="Image/Logo.png" alt="Matie Cake" class="footer-logo">
-                <div>Công ty TNHH Matie Cake</div>
-                <div>Địa chỉ, 3636 Hòa Hưng, phường Tân Sơn, Thành phố Hồ Chí Minh</div>
-                <div>Điện thoại: 0363699235</div>
+                <div>Matie Cake Co., Ltd.</div>
+                <div>Address: 3636 Hoa Hung, Tan Son Ward, Ho Chi Minh City</div>
+                <div>Phone: 0363699235</div>
                 <div>Email: sale@</div>
-                <div>Giấy chứng nhận đăng ký kinh doanh: số chứng nhận kinh doanh</div>
-                <div>Mã số doanh nghiệp: số chứng nhận kinh doanh. Giấy chứng nhận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 16/04/2019.</div>
+                <div>Business registration certificate: business registration number</div>
+                <div>Business code: business registration number. The business registration certificate was issued by the Department of Planning and Investment of Ho Chi Minh City on 16/04/2019.</div>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">Chính sách giao hàng</a></li>
-                    <li><a href="#">Chính sách trả hàng – hoàn tiền</a></li>
-                    <li><a href="#">Phương thức thanh toán</a></li>
-                    <li><a href="#">Điều khoản & điều kiện thanh toán</a></li>
-                    <li><a href="#">Bảo vệ thông tin cá nhân người tiêu dùng</a></li>
-                    <li><a href="#">Thông tin liên hệ</a></li>
-                    <li><a href="#">Cửa hàng</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund Policy</a></li>
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Personal Data Protection</a></li>
+                    <li><a href="#">Contact Information</a></li>
+                    <li><a href="#">Store</a></li>
                 </ul>
             </div>
         </div>
